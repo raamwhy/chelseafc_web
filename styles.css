@@ -1,0 +1,343 @@
+#main-banner { 
+    background-color: #08148c;
+    padding: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 600px; /* Maksimum lebar untuk kontainer */
+    margin: 200px auto; /* Center the container with margin at the top */
+    padding: 40px; /* Padding inside the container */
+    background-color: #08148c; /* Background color */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3); /* Shadow effect */
+    text-align: center; /* Center text inside the container */
+}
+
+body {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black; 
+    background-color: white;
+}
+
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    color: #ffffff; 
+    margin: 0;
+}
+
+h1, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    color: #08148c; 
+    margin: 0;
+}
+
+p, a, li, td, th {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-weight: 400;
+    color: rgb(255, 255, 255); 
+}
+
+a {
+    color: #FDB927; 
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; 
+    border-bottom: 3px solid #08148c;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-title img {
+    width: 50px;
+    height: auto;
+}
+
+.logo-title h1 {
+    color: #08148c;
+    font-size: 24px;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #08148c;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    color: #08148c;
+    font-weight: bold;
+    font-size: 15px; 
+    padding: 5px; 
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 500%;
+        background: #08148c;
+        position: absolute;
+        top: 51px; 
+        right: 12px;
+        
+        padding: 18px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 1001;
+        height: 0; 
+        overflow: hidden; 
+        transition: height 0.3s ease;
+    }
+
+    .navbar-links a {
+        color: white;
+        display: block;
+        padding: 1px 1px; 
+        white-space: nowrap; 
+    }
+
+    .navbar-links.show {
+        display: flex;
+        height: auto;
+    }
+    
+    .burger-menu {
+        display: block;
+    }
+
+    .menu-toggle:checked ~ .navbar-links {
+        display: flex;
+        height: 230px;
+    }
+
+    .navbar {
+        position: relative; 
+    }
+}
+
+.hero-section {
+    padding: 40px;
+    background-color: #08148c;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section h2 {
+    font-size: 36px;
+}
+
+.card::before {
+    content: 'Hot';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+.card-section {
+    padding: 20px;
+    background-color: white;
+    color: #08148c;
+    margin: 25px;
+    border: 2px solid #08148c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    background-color: #08148c;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.card-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FDB927;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.card-info {
+    font-size: 14px;
+    color: #FDB927;
+}
+
+.info-section {
+    padding: 20px;
+    background-color: #08148c;
+    color: white;
+    margin-bottom: 20px;
+    border-left: 5px solid #ffffff;
+}
+
+.info-section h2 {
+    color: #FDB927;
+    margin-bottom: 10px;
+}
+
+.info-section p, 
+.info-section ol, 
+.info-section ul {
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #FFF;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #08148c;
+    color: white;
+}
+
+table td {
+    background-color: #08148c;
+}
+
+.media-partners {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.media-partners h2 {
+    margin-bottom: 20px;
+    color: #FDB927;
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+}
+
+.partners-logos img {
+    width: 100px;
+    height: auto;
+    position: relative;
+}
+
+.fixed-logo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px; 
+    width: 60px; 
+    z-index: 1000; 
+}
+
+.fixed-logo img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    position: relative;
+    margin-top: 20px;
+}
+
+#highlight {
+    background-color: #FDB927;
+    padding: 10px;
+}
+
+#logoutButton {
+    color: red; /* Warna tombol logout */
+    font-weight: bold; /* Bold font untuk logout */
+    border: none; /* Menghapus border default */
+    cursor: pointer; /* Ubah cursor menjadi pointer */
+    transition: background-color 0.3s; /* Transisi halus saat hover */
+}
+
+#logoutButton:hover {
+    background-color: #f0f0f0; /* Ubah latar belakang saat hover */
+}
